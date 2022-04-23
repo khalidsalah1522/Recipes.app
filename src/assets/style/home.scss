@@ -1,0 +1,164 @@
+.home {
+  min-height: calc(100vh - 5rem);
+
+  .home-container {
+    min-height: calc(100vh - 5rem);
+
+    .hero {
+      height: calc(100vh - 5rem);
+    }
+
+    .hero-container {
+      height: calc(100vh - 5rem);
+
+      .show-images {
+        height: 600px;
+
+        .catigories {
+          font-family: Gemunu el, sans-serif;
+          text-transform: uppercase;
+          font-weight: 100;
+
+          span {
+            margin-right: 0.3rem;
+            color: #a66d03;
+          }
+        }
+
+        .catigories {
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+
+          span {
+            font-size: 0.8rem;
+          }
+        }
+
+        .btn-active {
+          font-size: 1.4rem;
+          letter-spacing: 1.3px;
+
+          span {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+  .home {
+    .home-container {
+      .hero {
+        min-height: calc(100vh - 6.5rem);
+      }
+      .hero-container {
+        height: calc(100vh - 6.5rem);
+
+        .show-images {
+          .catigories {
+            writing-mode: sideways-lr;
+
+            span {
+              margin-top: 0.4rem;
+            }
+          }
+
+          .catigories {
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+
+            span {
+              font-size: 0.8rem;
+            }
+          }
+
+          .btn-active {
+            font-size: 2rem;
+            letter-spacing: 1.5px;
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    .home-container {
+      .hero {
+        min-height: calc(100vh - 7rem);
+      }
+      .hero-container {
+        height: calc(100vh - 7rem);
+
+        .show-images {
+          height: 500px;
+
+          .catigories {
+            font-size: 2rem;
+            letter-spacing: 2.5px;
+
+            span {
+              font-size: 0.8rem;
+              margin-top: 0.6rem;
+            }
+          }
+
+          .btn-active {
+            font-size: 2.6rem;
+            letter-spacing: 4px;
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .home {
+    .home-container {
+      .hero {
+        min-height: calc(100vh - 8rem);
+      }
+      .hero-container {
+        height: calc(100vh - 8rem);
+
+        .show-images {
+          height: 550px;
+
+          .catigories {
+            font-size: 2rem;
+            letter-spacing: 2.5px;
+
+            span {
+              font-size: 0.8rem;
+              margin-top: 0.6rem;
+            }
+          }
+
+          .btn-active {
+            font-size: 2.6rem;
+            letter-spacing: 4px;
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

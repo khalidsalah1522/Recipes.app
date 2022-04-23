@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/assets/style/loader.css" />
+    <script type="module" src="../src/index.jsx"></script>
+    <title>Recipe</title>
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader-container">
+        <div class="logo">
+          <span>The</span>
+          <h2>FORMIDABLE</h2>
+        </div>
+        <div class="progress"></div>
+        <div class="precentage"><span>0</span>%</div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <script>
+      let progress = document.querySelector(".progress");
+      let precentage = document.querySelector(".precentage span");
+      let pr = 100;
+      let se = 0;
+
+      let proInterval = setInterval(handleEvent, );
+
+      const handleEvent = () => {
+        progress.style.transform = `translateX(-${pr}%)`;
+        precentage.innerText = se > 100 ? 100 : se;
+        --pr;
+        ++se;
+        if (se > 100) {
+          // console.count("FUCK");
+          // window.clearInterval(proInterval());
+        }
+        console.count("Goood");
+      };
+
+      window.addEventListener("DOMContentLoaded", (e) => {
+        // proInterval(handleEvent, Ma  th.round(e.timeStamp) / 100);
+      });
+    </script>
+  </body>
+</html>
