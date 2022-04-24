@@ -2,29 +2,46 @@ import React, { useState, useEffect } from "react";
 import gsap from "gsap";
 
 const images = [
-  // eslint-disable-next-line global-require
-  require("../../assets/images/bakd-raw-by-karolin-baitinger-qS4xm9xosA8-unsplash-min.jpg"),
-  // eslint-disable-next-line global-require
-  require("../../assets/images/ieva-kisunaite-aNxlLSec5Dk-unsplash-min.jpg"),
-  // eslint-disable-next-line global-require
-  require("../../assets/images/monika-grabkowska-pHeX8H9WQpY-unsplash-min.jpg"),
-  // eslint-disable-next-line global-require
-  require("../../assets/images/pesce-huang-CxrkfpUAIEk-unsplash-min.jpg"),
+  {
+    // eslint-disable-next-line global-require
+    src: require("../../assets/images/bakd-raw-by-karolin-baitinger-qS4xm9xosA8-unsplash-min.jpg"),
+    class: "active-img",
+  },
+  {
+    // eslint-disable-next-line global-require
+    src: require("../../assets/images/ieva-kisunaite-aNxlLSec5Dk-unsplash-min.jpg"),
+    class: "",
+  },
+  {
+    // eslint-disable-next-line global-require
+    src: require("../../assets/images/monika-grabkowska-pHeX8H9WQpY-unsplash-min.jpg"),
+    class: "",
+  },
+  {
+    // eslint-disable-next-line global-require
+    src: require("../../assets/images/pesce-huang-CxrkfpUAIEk-unsplash-min.jpg"),
+    class: "",
+  },
 ];
 
 function Hero() {
-  const [image, setImage] = useState(0);
+  const [image, setImage] = useState(images);
   const timeLine = gsap.timeline();
 
   const handleImages = (e, num) => {
-    setImage(num);
+    images.forEach((img) => {
+      // eslint-disable-next-line no-param-reassign
+      img.class = "";
+    });
+    images[num].class = "active-img";
+    setImage([...images]);
     e.target.style.order = 2;
     e.target.classList.add("btn-active");
   };
 
   useEffect(() => {
     timeLine.fromTo(
-      ".hero-image img",
+      ".active-img",
       {
         x: "-100%",
         autoAlpha: 0,
@@ -40,16 +57,20 @@ function Hero() {
           <button
             className="catigories btn-active order-1"
             type="button"
-            onClick={() => setImage(0)}
+            onClick={() => handleImages(0)}
           >
             <span>01</span>SeaFood
           </button>
-          <div className="hero-image h-[70%] w-full overflow-hidden order-3 lg:h-full lg:w-[80%]">
-            <img
-              src={images[image]}
-              alt=""
-              className="h-full w-full object-cover object-center translate-x-[-100%] opacity-0"
-            />
+          <div className="hero-image relative h-[70%] w-full overflow-hidden order-3 lg:h-full lg:w-[80%]">
+            {image.map((img) => (
+              <React.Fragment key={img.src}>
+                <img
+                  src={img.src}
+                  alt=""
+                  className={`${img.class} absolute left-0 top-0 h-full w-full object-cover object-center translate-x-[-100%] opacity-0`}
+                />
+              </React.Fragment>
+            ))}
           </div>
           <button
             className="catigories order-3"
