@@ -4,6 +4,7 @@ import Featured from "./Home/Featured";
 import "../assets/style/home.css";
 import Catogries from "./Home/Catogries";
 import Chiefs from "./Home/Chiefs";
+import Companies from "./Home/Companies";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Featured />
         <Catogries />
         <Chiefs />
+        <Companies />
       </div>
     </section>
   );

@@ -63,12 +63,12 @@ function Chiefs() {
   }, [num, target]);
 
   return (
-    <section className="chiefs min-h-screen mt-[2rem]">
-      <div className="chiefs-container h-screen flex flex-col items-center">
-        <h2 className="text-[3rem] font-light font-NATS tracking-wide mb-[2rem] lg:text-[3.2rem] xl:text-[3.6rem] 2xl:text-[4.2rem] xl:mb-[0rem]">
+    <section className="chiefs min-h-[120vh] my-[2rem]">
+      <div className="chiefs-container h-[120vh] flex flex-col items-center">
+        <h2 className="text-[3rem] text-[#ff5656] font-light font-NATS tracking-wide mb-[2rem] lg:text-[3.2rem] xl:text-[3.6rem] 2xl:text-[4.2rem] xl:mb-[0rem]">
           Top Chiefs
         </h2>
-        <div className="chiefs-info w-[90%] h-[90%] md:w-[75%] lg:w-[60%] xl:w-[85%] 2xl:w-[70%]">
+        <div className="chiefs-info w-[90%] h-[95%] md:w-[75%] lg:w-[60%] xl:w-[85%] 2xl:w-[70%]">
           <div className="chiefs-info-container h-full flex flex-col items-center justify-between xl:flex-row-reverse">
             <div className="img-container_name h-[49%] w-[100%] xl:h-[60%] xl:w-[45%]">
               <img
@@ -80,7 +80,7 @@ function Chiefs() {
                 {chiefsInfo[num].ChiefName}
               </h4>
             </div>
-            <div className="info_chief-number px-[0.3rem] h-[49%] flex justify-between flex-row-reverse mt-[2rem] xl:h-[80%] xl:w-[49%] xl:flex-row xl:items-center">
+            <div className="info_chief-number px-[0.3rem] h-[49%] flex justify-between flex-row-reverse mt-[2rem] xl:h-[55%] xl:w-[49%] xl:flex-row xl:items-center 2xl:h-[60%]">
               <div className="col1 flex flex-col justify-between w-[10%] h-[30%] xl:h-[20%]">
                 <button type="button" className="btn" onClick={() => setNum(0)}>
                   1
@@ -92,8 +92,8 @@ function Chiefs() {
                   3
                 </button>
               </div>
-              <div className="col2 h-[70%] translate-x-[-120%] opacity-0 w-[80%] flex flex-col justify-between">
-                <div className="video text-[#ff5656] w-[25%] text-[1.4rem] flex items-center justify-between xl:w-[22%] 2xl:w-[20%]">
+              <div className="col2 h-[90%] translate-x-[-120%] opacity-0 w-[80%] flex flex-col justify-between">
+                <div className="video cursor-pointer text-[#ff5656] w-[25%] text-[1.4rem] flex items-center justify-between xl:w-[22%] 2xl:w-[20%]">
                   <FaVideo />
                   <span className="text-[0.9rem] font-bold text-gray-700">
                     01:25
@@ -102,7 +102,7 @@ function Chiefs() {
                 <h2 className="font-NATS text-[2.6rem] font-semibold leading-[35px] w-[85%] lg:text-[3.4rem] lg:leading-[48px] xl:w-[90%] 2xl:text-[4rem] 2xl:w-[100%] 2xl:leading-[55px]">
                   {chiefsInfo[num].title}
                 </h2>
-                <p className="w-[109%] text-gray-500 font-semibold lg:w-[95%] mb-[1rem] xl:leading-[25px] xl:w-[85%] 2xl:w-[70%] 2xl:text-[1.02rem]">
+                <p className="w-[109%] text-gray-500 font-semibold lg:w-[95%] mb-[1rem] xl:leading-[25px] xl:w-[85%] 2xl:w-[75%] 2xl:leading-[30px] 2xl:text-[1.1rem]">
                   {chiefsInfo[num].desc}
                 </p>
                 <div className="date font-semibold text-[1.2rem]">
